@@ -59,8 +59,7 @@
   <button id="nahhBtn">NAHH</button>
 </div>
 
-<audio id="song" src="Leonora.mp3" preload="auto"></audio>
-
+<audio id="song" src="Leonora.mp3"></audio>
 <script>
   const opkorsBtn = document.getElementById('opkorsBtn');
   const nahhBtn = document.getElementById('nahhBtn');
@@ -95,9 +94,8 @@
     if (!song.paused) {
       song.currentTime = 0; // restart if already playing
     }
-    song.play().catch(() => {
-      alert("Please allow audio playback in your browser!");
-    });
+
+    
 
     // Go to LOVE page
     document.body.innerHTML = `
